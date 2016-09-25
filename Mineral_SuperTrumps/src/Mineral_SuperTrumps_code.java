@@ -6,6 +6,9 @@
 public class Mineral_SuperTrumps_code {
 
     public static void main(String[] args) {
+        welcomeMessage();
+    }
+    private static void welcomeMessage() {
         System.out.println("hello");
     }
 }
