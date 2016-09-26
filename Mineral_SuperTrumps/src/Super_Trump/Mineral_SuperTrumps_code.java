@@ -1,4 +1,4 @@
-//package Mineral_SuperTrumps;
+package Super_Trump;
 
 /**
  * Created by Jacob Negri on 25/09/2016.
@@ -18,6 +18,14 @@ public class Mineral_SuperTrumps_code {
         }
     }
 
+    private static void startGame() {
+
+        int numPlayers = getNumPlayers();
+        STGame game = new STGame(numPlayers);
+        //selectDealer();
+        //dealCards();
+    }
+
     private static int getUserMenuChoice() {
         // get the user choice and return it
         // currently just return 1 until above comment is coded
@@ -33,7 +41,9 @@ public class Mineral_SuperTrumps_code {
         System.out.println("2. Exit");
     }
 
-    private static void startGame() {
-        dealCards();
+    private static int getNumPlayers() {
+        // get the numebr of players
+        // currently just return 1 until above comment is coded
+        return 2;
     }
 }
