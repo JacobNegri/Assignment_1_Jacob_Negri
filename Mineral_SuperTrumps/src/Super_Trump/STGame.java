@@ -1,9 +1,13 @@
 package Super_Trump;
 
+import java.util.ArrayList;
+
 /**
  * Created by jnegr3 on 26/09/2016.
  */
 public class STGame {
+
+    private static final int NUM_CARDS_TO_DEAL = 8;
     private int numPlayers;
     private int dealerID;
     private STPlayer[] players;
@@ -25,6 +29,7 @@ public class STGame {
         players = new STPlayer[numPlayers];
 
         for (STPlayer player : players) {
+            ArrayList<STCard> card = deck.dealCards(NUM_CARDS_TO_DEAL);
             player.setCards();
         }
     }
