@@ -6,6 +6,8 @@ package Super_Trump;
 public class STGame {
     private int numPlayers;
     private int dealerID;
+    private STPlayer[] players;
+    private STDeck deck;
 
     public STGame(int numPlayers) {
         this.numPlayers = numPlayers;
@@ -15,11 +17,15 @@ public class STGame {
         // google how to get random int in java
         // number between 1 and number of players
         // for now return 1
-        return 1;
+        dealerID = 1;
     }
 
     public void dealRandomCards() {
 
-        STPlayer players = new STPlayer[numPlayers];
+        players = new STPlayer[numPlayers];
+
+        for (STPlayer player : players) {
+            player.setCards();
+        }
     }
 }
