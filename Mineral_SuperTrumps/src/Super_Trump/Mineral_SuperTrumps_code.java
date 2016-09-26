@@ -22,8 +22,8 @@ public class Mineral_SuperTrumps_code {
 
         int numPlayers = getNumPlayers();
         STGame game = new STGame(numPlayers);
-        //selectDealer();
-        //dealCards();
+        game.selectDealer();
+        game.dealRandomCards();
     }
 
     private static int getUserMenuChoice() {
