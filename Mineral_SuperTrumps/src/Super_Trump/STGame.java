@@ -17,4 +17,9 @@ public class STGame {
         // for now return 1
         return 1;
     }
+
+    public void dealRandomCards() {
+
+        STPlayer players = new STPlayer[numPlayers];
+    }
 }
