@@ -8,20 +8,22 @@ import java.util.ArrayList;
  */
 public class STDeck {
 
-    private static final int NUM_CARDS_INIT = 60;
+    private static final int NUM_CARDS_INIT = 10;
     private ArrayList<STCard> cards;
 
-    // todo: list of all cards
     public STDeck() {
         cards =  new ArrayList<STCard>();
 
         for(int i = 0; i < NUM_CARDS_INIT; i++) {
             cards.add(new STCard());
-            // google how to create random array of integers
         }
     }
 
-    public ArrayList<STCard> dealCards(int i) {
+    public ArrayList<STCard> dealCards(int nCards) {
+
+        for (int i = 0; i < nCards; i++){
+
+        }
         return null;
     }
 }

@@ -21,6 +21,9 @@ public class STGame {
         // google how to get random int in java
         // number between 1 and number of players
         // for now return 1
+
+        // the two
+        // int i = new random().nextInt(2) ;
         dealerID = 1;
     }
 
@@ -29,8 +32,8 @@ public class STGame {
         players = new STPlayer[numPlayers];
 
         for (STPlayer player : players) {
-            ArrayList<STCard> card = deck.dealCards(NUM_CARDS_TO_DEAL);
-            player.setCards();
+            ArrayList<STCard> cards = deck.dealCards(NUM_CARDS_TO_DEAL);
+            player.setCards(cards);
         }
     }
 }
