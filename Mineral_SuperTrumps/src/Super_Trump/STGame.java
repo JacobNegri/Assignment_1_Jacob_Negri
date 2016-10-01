@@ -12,9 +12,11 @@ public class STGame {
     private int dealerID;
     private STPlayer[] players;
     private STDeck deck;
+    int yourPlayerId;
 
     public STGame(int numPlayers) {
         this.numPlayers = numPlayers;
+        deck = new STDeck();
     }
 
     public void selectDealer() {
@@ -31,9 +33,21 @@ public class STGame {
 
         players = new STPlayer[numPlayers];
 
+        for (int i = 0; i < numPlayers; i++) {
+            players[i] = new STPlayer("Playerid=" + i);
+        }
+
         for (STPlayer player : players) {
             ArrayList<STCard> cards = deck.dealCards(NUM_CARDS_TO_DEAL);
             player.setCards(cards);
         }
+    }
+
+    public void selectYouAsPlayer(){
+        yourPlayerId = 0;
+    }
+
+    public STPlayer getHumPlayer() {
+        return players[yourPlayerId];
     }
 }

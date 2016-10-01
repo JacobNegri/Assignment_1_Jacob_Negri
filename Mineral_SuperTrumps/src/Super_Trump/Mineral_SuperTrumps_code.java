@@ -24,6 +24,11 @@ public class Mineral_SuperTrumps_code {
         STGame game = new STGame(numPlayers);
         game.selectDealer();
         game.dealRandomCards();
+
+        game.selectYouAsPlayer();
+
+        STPlayer humPlayer = game.getHumPlayer();
+
     }
 
     private static int getUserMenuChoice() {
@@ -44,6 +49,6 @@ public class Mineral_SuperTrumps_code {
     private static int getNumPlayers() {
         // get the numebr of players
         // currently just return 1 until above comment is coded
-        return 2;
+        return 3;
     }
 }
