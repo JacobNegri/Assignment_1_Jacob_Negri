@@ -23,7 +23,11 @@ public class STDeck {
 
         for (int i = 0; i < nCards; i++){
 
+            int idx = new Random().nextInt();
+
+            STCard card =
         }
         return null;
     }
 }
+ 8:14
