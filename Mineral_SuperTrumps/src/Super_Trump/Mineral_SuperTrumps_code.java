@@ -1,5 +1,5 @@
 package Super_Trump;
-
+import java.util.*;
 /**
  * Created by Jacob Negri on 25/09/2016.
  */
@@ -16,6 +16,9 @@ public class Mineral_SuperTrumps_code {
         if(menuChoice == NEW_GAME){
             game = startGame();
             game.playTheGame();
+        }
+        else if(menuChoice == QUIT_GAME){
+            System.out.println("Thanks for playing.");
         }
     }
 
@@ -36,9 +39,25 @@ public class Mineral_SuperTrumps_code {
     }
 
     private static int getUserMenuChoice() {
+        int userMenuSelection = 0;
+
+        Scanner userInput = new Scanner(System.in);
+
+        while (userMenuSelection < 1 || userMenuSelection > 2) {
+            System.out.println("Enter Menu Choice");
+            userMenuSelection = userInput.nextInt() ;
+        }
+
+//        if (userMenuSelection == 1){
+//            return 1;
+//        }
+//
+//        else if(userMenuSelection == 2){
+//            return 2;
+//        }
         // get the user choice and return it
-        // currently just return 1 until above comment is coded
-        return 1;
+        // currently just return 1 until above comment is code
+        return userMenuSelection;
     }
 
     private static void welcomeMessage() {
@@ -51,12 +70,21 @@ public class Mineral_SuperTrumps_code {
     }
 
     private static int getNumPlayers() {
+
+        int userPlayerSelection = 0;
+
+        Scanner userInput = new Scanner(System.in);
+
+        while (userPlayerSelection < 1 || userPlayerSelection > 5) {
+            System.out.println("Enter amount of players");
+            userPlayerSelection = userInput.nextInt() ;
+        }
         // get the numebr of players
         // currently just return 1 until above comment is coded
-        return 3;
+        return userPlayerSelection;
     }
 
     private static void showPlayer(STPlayer humPlayer) {
-        System.out.println("Hum player" + humPlayer);
+        System.out.println("Human player" + humPlayer);
     }
 }
