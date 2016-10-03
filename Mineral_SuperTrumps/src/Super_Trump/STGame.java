@@ -154,10 +154,10 @@ public class STGame {
 
         // This is only added as the reading XML was not working and would not allow me to actually get the players to place cards without knowing values of each card
 
-        System.out.println("<< " + players[computerId].playersHand().get(1) + " Card is played >>");
+        System.out.println("<< " + players[computerId].playersHand().get(1) + " Card is played >>\n");
         players[computerId].playersHand().remove(1);
 
-        System.out.println(players[computerId].playersHand());
+        System.out.println(players[computerId].playersHand()+"\n");
     }
 
     private void showPlayerTurn() {
