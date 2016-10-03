@@ -18,7 +18,7 @@ public class STPlayer {
     }
 
     public String toString() {
-        return "Player Id=" + playerId + "\n cards = " + cards;
+        return "Player Id =" + playerId + "\n cards = " + cards;
     }
 
     public ArrayList<STCard> playersHand(){

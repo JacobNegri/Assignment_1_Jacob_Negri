@@ -5,16 +5,6 @@ import java.util.*;
  */
 public class Mineral_SuperTrumps_code {
 
-    private MenuSelection menuOption;
-
-    private Mineral_SuperTrumps_code(MenuSelection menuOption){
-        this.menuOption = menuOption;
-    }
-
-    private enum MenuSelection{
-        NEW_GAME, QUIT_GAME, INSTRUCTIONS
-    }
-
     public static void main(String[] args) {
         welcomeMessage();
         showMenu();
@@ -29,6 +19,15 @@ public class Mineral_SuperTrumps_code {
 //        else if(menuChoice == QUIT_GAME){
 //            System.out.println("Thanks for playing.");
 //        }
+    }
+    private MenuSelection menuOption;
+
+    private Mineral_SuperTrumps_code(MenuSelection menuOption){
+        this.menuOption = menuOption;
+    }
+
+    private enum MenuSelection{
+        NEW_GAME, QUIT_GAME, INSTRUCTIONS
     }
 
     private void selectedMenuOption(){
