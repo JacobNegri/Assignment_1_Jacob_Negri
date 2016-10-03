@@ -9,7 +9,7 @@ import java.util.Random;
  */
 public class STDeck {
 
-    private static final int NUM_CARDS_INIT = 10;
+    private static final int NUM_CARDS_INIT = 54;
     private ArrayList<STCard> cards;
 
     public STDeck() {
@@ -22,12 +22,13 @@ public class STDeck {
 
     public ArrayList<STCard> dealCards(int nCards) {
         ArrayList<STCard> ret = new ArrayList<STCard>();
+
         for (int i = 0; i < nCards; i++){
-            int idx = new Random().nextInt(cards.size());
-            STCard card = cards.remove(idx);
+            int index = new Random().nextInt(cards.size());
+            STCard card = cards.remove(index);
             ret.add(card);
-            System.out.println(" \n card" + card);
+            System.out.println("\n card" + card);
         }
-        return null;
+        return ret;
     }
 }

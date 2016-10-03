@@ -18,7 +18,7 @@ public class STPlayer {
     }
 
     public String tooString() {
-        return "PlayerId=" + playerId;
+        return "PlayerId=" + playerId + "\n cards=" + cards;
     }
 
 }

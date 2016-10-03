@@ -12,13 +12,14 @@ public class Mineral_SuperTrumps_code {
         welcomeMessage();
         showMenu();
         int menuChoice = getUserMenuChoice();
-
+        STGame game;
         if(menuChoice == NEW_GAME){
-            startGame();
+            game = startGame();
+            game.playTheGame();
         }
     }
 
-    private static void startGame() {
+    private static STGame startGame() {
 
         int numPlayers = getNumPlayers();
         STGame game = new STGame(numPlayers);
@@ -28,7 +29,10 @@ public class Mineral_SuperTrumps_code {
         game.selectYouAsPlayer();
 
         STPlayer humPlayer = game.getHumPlayer();
+        showPlayer(humPlayer);
 
+        // game.playTheGame();
+        return game;
     }
 
     private static int getUserMenuChoice() {
@@ -50,5 +54,9 @@ public class Mineral_SuperTrumps_code {
         // get the numebr of players
         // currently just return 1 until above comment is coded
         return 3;
+    }
+
+    private static void showPlayer(STPlayer humPlayer) {
+        System.out.println("Hum player" + humPlayer);
     }
 }

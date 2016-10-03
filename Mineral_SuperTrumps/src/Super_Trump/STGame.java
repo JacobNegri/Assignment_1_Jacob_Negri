@@ -50,4 +50,20 @@ public class STGame {
     public STPlayer getHumPlayer() {
         return players[yourPlayerId];
     }
+
+    public void playTheGame() {
+
+        Boolean gameIsOn = true;
+
+        while (gameIsOn) {
+
+            //todo: setup players in correct order
+            for (int i = 0; i < players.length; i++) {
+                //todo: check humanplayer
+            }
+
+            //showTurnPlayer();
+
+        }
+    }
 }
