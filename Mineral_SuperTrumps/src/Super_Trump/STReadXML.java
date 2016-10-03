@@ -9,11 +9,11 @@ import org.w3c.dom.NodeList;
  * Created by jc319816 on 3/10/16.
  */
 public class STReadXML {
-    private int cards;
-    public Document parse(Mineral_SuperTrumps_code cards) {
+//    private int cards;
+//    public Document parse(Mineral_SuperTrumps_code cards) {
 
 
-        //public void main (String[]args) throws Exception {
+        public void main (String[]args) throws Exception {
             try {
                 DOMParser parser = new DOMParser();
                 parser.parse("MstCards_151021.plist");
@@ -46,9 +46,9 @@ public class STReadXML {
             {
                 e.printStackTrace();
             }
-        //}
-        return cards = 2;
-    }
+        }
+        //return cards = 2;
+
     protected Node getNode(String tagName, NodeList nodes) {
         for ( int x = 0; x < nodes.getLength(); x++ ) {
             Node node = nodes.item(x);

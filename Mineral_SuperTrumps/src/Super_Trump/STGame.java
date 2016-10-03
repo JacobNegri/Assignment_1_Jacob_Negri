@@ -20,6 +20,8 @@ public class STGame {
     private int botPlayerId3;
     private int botPlayerId4;
 
+    private List computerBots = new ArrayList(4);
+
 
     public STGame(int numPlayers) {
         this.numPlayers = numPlayers;
@@ -94,7 +96,14 @@ public class STGame {
 
     public void playTheGame() {
 
+        int convertObjectToInteger;
+
         Boolean gameIsOn = true;
+
+        computerBots.add(botPlayerId1);
+        computerBots.add(botPlayerId2);
+        computerBots.add(botPlayerId3);
+        computerBots.add(botPlayerId4);
 
         while (gameIsOn) {
 
@@ -107,6 +116,9 @@ public class STGame {
                 }
                 else{
                     System.out.println("Computers Turn: ");
+                    convertObjectToInteger = Integer.parseInt(computerBots.get(indexPlayer - 1).toString());
+
+                    showCompTurn(convertObjectToInteger);
                 }
             }
 
@@ -124,6 +136,10 @@ public class STGame {
             //showTurnPlayer();
 
         }
+    }
+
+    private void showCompTurn(int computerId) {
+        System.out.println("Computer Id = " + computerId);
     }
 
     private void showPlayerTurn() {
