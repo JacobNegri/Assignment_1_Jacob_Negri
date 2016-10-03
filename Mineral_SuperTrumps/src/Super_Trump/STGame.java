@@ -55,7 +55,7 @@ public class STGame {
         while (gameIsOn) {
 
             //todo: setup players in correct order
-            for (int indexPlayer = 0; indexPlayer < players.length; indexPlayer++) {
+            for (int indexPlayer = yourPlayerId; indexPlayer < players.length; indexPlayer++) {
 
                 if (indexPlayer == yourPlayerId){
                     System.out.println("Users Turn: \n");
@@ -88,7 +88,7 @@ public class STGame {
             selectOption = userSelection.nextInt();
 
             while (selectOption < 0 || selectOption > handCount) {
-                System.out.println("What card due you wish to play? \nType '0' to pass >>");
+                System.out.println("< Please enter a card place holder within your hand >\nWhat card do you wish to play? \nType '0' to pass >>");
                 selectOption = userSelection.nextInt();
             }
 
