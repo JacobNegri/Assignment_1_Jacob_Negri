@@ -119,7 +119,7 @@ public class Mineral_SuperTrumps_code {
         return game;
     }
 
-    private static void getUserMenuChoice() {
+    public static void getUserMenuChoice() {
         int userMenuSelection = 0;
 
         Scanner userInput = new Scanner(System.in);
@@ -157,7 +157,7 @@ public class Mineral_SuperTrumps_code {
         System.out.println("Welcome to Mineral Supertrumps.");
     }
 
-    private static void showMenu() {
+    public static void showMenu() {
         System.out.println("1. Start game");
         System.out.println("2. Instructions");
         System.out.println("3. Exit");

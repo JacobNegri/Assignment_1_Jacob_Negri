@@ -2,6 +2,9 @@ package Super_Trump;
 
 import java.util.*;
 
+import static Super_Trump.Mineral_SuperTrumps_code.getUserMenuChoice;
+import static Super_Trump.Mineral_SuperTrumps_code.showMenu;
+
 /**
  * Created by Jacob Negri on 25/09/2016.
  */
@@ -19,6 +22,8 @@ public class STGame {
     private int botPlayerId2;
     private int botPlayerId3;
     private int botPlayerId4;
+
+    private int botWins;
 
     private List computerBots = new ArrayList(4);
 
@@ -116,6 +121,8 @@ public class STGame {
                 if (players[yourPlayerId].playersHand().size() == 0){
                     System.out.println("Congratulations, YOU WIN!!!!!!!!!!! ");
                     gameIsOn = false;
+                    showMenu();
+                    getUserMenuChoice();
                     break;
                 }
 
@@ -161,6 +168,12 @@ public class STGame {
         players[computerId].playersHand().remove(1);
 
         System.out.println(players[computerId].playersHand()+"\n");
+
+        if (players[computerId].playersHand().size() == 0) {
+            System.out.println("Player ID: " + computerId + " WINS!!");
+            showMenu();
+            getUserMenuChoice();
+        }
     }
 
     private void showPlayerTurn() {
