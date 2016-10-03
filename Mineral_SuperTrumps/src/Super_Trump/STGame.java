@@ -111,7 +111,7 @@ public class STGame {
             // System.out.println("Player Id " + (dealerID + 1) + ": You start the round >>");
 
             //todo: setup players in correct order
-            for (int indexPlayer = dealerID + 1; indexPlayer < players.length; indexPlayer++) {
+            for (int indexPlayer = yourPlayerId; indexPlayer < players.length; indexPlayer++) {
 
                 if (indexPlayer == yourPlayerId){
                     System.out.println("Users Turn: \n");
