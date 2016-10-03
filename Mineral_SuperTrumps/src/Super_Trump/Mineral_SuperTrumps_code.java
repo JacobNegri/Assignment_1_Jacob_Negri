@@ -5,20 +5,40 @@ import java.util.*;
  */
 public class Mineral_SuperTrumps_code {
 
-    private static final int NEW_GAME = 1;
-    private static final int QUIT_GAME = 2;
+    private MenuSelection menuOption;
+
+    private enum MenuSelection{
+        NEW_GAME, QUIT_GAME
+    }
 
     public static void main(String[] args) {
         welcomeMessage();
         showMenu();
-        int menuChoice = getUserMenuChoice();
-        STGame game;
-        if(menuChoice == NEW_GAME){
-            game = startGame();
-            game.playTheGame();
-        }
-        else if(menuChoice == QUIT_GAME){
-            System.out.println("Thanks for playing.");
+        getUserMenuChoice();
+//          No longer needed as made enumerated;;;;;;;;;;
+//        int menuChoice = getUserMenuChoice();
+//        STGame game;
+//        if(menuChoice == NEW_GAME){
+//            game = startGame();
+//            game.playTheGame();
+//        }
+//        else if(menuChoice == QUIT_GAME){
+//            System.out.println("Thanks for playing.");
+//        }
+    }
+
+    private void selectedMenuOption{
+        switch(menuOption) {
+
+            case NEW_GAME:
+                STGame game;
+                game = startGame();
+                game.playTheGame();
+                break;
+
+            case QUIT_GAME:
+                System.out.println("Thanks for playing.");
+
         }
     }
 
@@ -38,7 +58,7 @@ public class Mineral_SuperTrumps_code {
         return game;
     }
 
-    private static int getUserMenuChoice() {
+    private static void getUserMenuChoice() {
         int userMenuSelection = 0;
 
         Scanner userInput = new Scanner(System.in);
@@ -48,13 +68,14 @@ public class Mineral_SuperTrumps_code {
             userMenuSelection = userInput.nextInt() ;
         }
 //      if made enumarated will need these if statements
-//        if (userMenuSelection == 1){
-//            return 1;
-//        }
-//
-//        else if(userMenuSelection == 2){
-//            return 2;
-//        }
+        if (userMenuSelection == 1){
+            Mineral_SuperTrumps_code newGame = new Mineral_SuperTrumps_code(.NEW_GAME);
+            newGame.selectedMenuOption();
+        }
+
+        else if(userMenuSelection == 2){
+            return 2;
+        }
         // get the user choice and return it
         // currently just return 1 until above comment is code
         return userMenuSelection;
