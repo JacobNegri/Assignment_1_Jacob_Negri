@@ -133,5 +133,6 @@ public class Mineral_SuperTrumps_code {
 
     private static void showPlayer(STPlayer humPlayer) {
         System.out.println(humPlayer);
+        System.out.println("........................................................");
     }
 }

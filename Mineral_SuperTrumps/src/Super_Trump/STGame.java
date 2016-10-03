@@ -58,11 +58,11 @@ public class STGame {
             for (int indexPlayer = 0; indexPlayer < players.length; indexPlayer++) {
 
                 if (indexPlayer == yourPlayerId){
-                    System.out.println("This is the human players turn: ");
+                    System.out.println("Users Turn: \n");
                     showPlayerTurn();
                 }
                 else{
-                    System.out.println("This is the computers turn: ");
+                    System.out.println("Computers Turn: ");
                 }
             }
 
@@ -84,7 +84,7 @@ public class STGame {
 
 
         try {
-            System.out.println("What card do you wish to play? \nType '0' to pass >>");
+            System.out.println("\nWhat card do you wish to play? \nType '0' to pass >>");
             selectOption = userSelection.nextInt();
 
             while (selectOption < 0 || selectOption > handCount) {
