@@ -10,39 +10,6 @@ import org.w3c.dom.NodeList;
  */
 public class STReadXML {
 
-    try {
-        DOMParser parser = new DOMParser();
-        parser.parse("MstCards_151021.plist");
-        Document doc = parser.getDocument();
-
-        // Get the document's root XML node
-        NodeList root = doc.getChildNodes();
-
-        // Navigate down the hierarchy to get to the CEO node
-        Node comp = getNode("fileName", root);
-        Node exec = getNode("cardType", comp.getChildNodes() );
-        String execType = getNodeAttr("value", exec);
-
-        // Load the executive's data from the XML
-        NodeList nodes = exec.getChildNodes();
-        String lastName = getNodeValue("LastName", nodes);
-        String firstName = getNodeValue("FirstName", nodes);
-        String street = getNodeValue("street", nodes);
-        String city = getNodeValue("city", nodes);
-        String state = getNodeValue("state", nodes);
-        String zip = getNodeValue("zip", nodes);
-
-        System.out.println("Executive Information:");
-        System.out.println("Type: " + execType);
-        System.out.println(lastName + ", " + firstName);
-        System.out.println(street);
-        System.out.println(city + ", " + state + " " + zip);
-    } catch ( Exception e ) {
-        e.printStackTrace();
-
-
-// ...
-
     protected Node getNode(String tagName, NodeList nodes) {
         for ( int x = 0; x < nodes.getLength(); x++ ) {
             Node node = nodes.item(x);
@@ -108,7 +75,41 @@ public class STReadXML {
         return "";
     }
 
-}
+    public class DOMParser {
+        try {
+            DOMParser parser = new DOMParser();
+            parser.parse("MstCards_151021.plist");
+            Document doc = parser.getDocument();
+
+            // Get the document's root XML node
+            NodeList root = doc.getChildNodes();
+
+            // Navigate down the hierarchy to get to the CEO node
+            Node comp = getNode("fileName", root);
+            Node exec = getNode("cardType", comp.getChildNodes() );
+            String execType = getNodeAttr("value", exec);
+
+            // Load the executive's data from the XML
+            NodeList nodes = exec.getChildNodes();
+            String lastName = getNodeValue("LastName", nodes);
+            String firstName = getNodeValue("FirstName", nodes);
+            String street = getNodeValue("street", nodes);
+            String city = getNodeValue("city", nodes);
+            String state = getNodeValue("state", nodes);
+            String zip = getNodeValue("zip", nodes);
+
+            System.out.println("Executive Information:");
+            System.out.println("Type: " + execType);
+            System.out.println(lastName + ", " + firstName);
+            System.out.println(street);
+            System.out.println(city + ", " + state + " " + zip);
+        } catch ( Exception e )
+
+        {
+            e.printStackTrace();
+        }
+
+    }
 
 
 
