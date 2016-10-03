@@ -89,7 +89,7 @@ public class STGame {
 
 
         try {
-            System.out.println("What card due you wish to play \n You may pass if you need");
+            System.out.println("What card do you wish to play \n You may pass if you need");
             selectOption = userSelection.nextInt();
 
             while (selectOption < 0 || selectOption > handCount) {
