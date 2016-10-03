@@ -104,6 +104,9 @@ public class STGame {
         }
         else {
             System.out.println(players[yourPlayerId].playersHand().get(selectOption - 1) + " Card is played");
+            players[yourPlayerId].playersHand().remove(selectOption - 1);
+
+            System.out.println(players[yourPlayerId].playersHand());
         }
     }
 }
