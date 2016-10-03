@@ -2,7 +2,7 @@ package Super_Trump;
 
 import java.util.ArrayList;
 /**
- * Created by jnegr3 on 26/09/2016.
+ * Created by Jacob Negri on 25/09/2016.
  */
 public class STPlayer {
     private ArrayList<STCard> cards;

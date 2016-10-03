@@ -6,7 +6,7 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 /**
- * Created by jc319816 on 3/10/16.
+ * Created by Jacob Negri on 25/09/2016.
  */
 public class STReadXML {
 //    private int cards;
