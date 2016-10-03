@@ -12,7 +12,7 @@ public class Mineral_SuperTrumps_code {
     }
 
     private enum MenuSelection{
-        NEW_GAME, QUIT_GAME
+        NEW_GAME, QUIT_GAME, INSTRUCTIONS
     }
 
     public static void main(String[] args) {
@@ -42,6 +42,13 @@ public class Mineral_SuperTrumps_code {
 
             case QUIT_GAME:
                 System.out.println("Thanks for playing.");
+                break;
+
+            case INSTRUCTIONS:
+                System.out.println("<<< Mineral Supertrumps Rules >>>");
+                System.out.println(" ");
+                showMenu();
+                getUserMenuChoice();
 
         }
     }
@@ -67,8 +74,8 @@ public class Mineral_SuperTrumps_code {
 
         Scanner userInput = new Scanner(System.in);
 
-        while (userMenuSelection < 1 || userMenuSelection > 2) {
-            System.out.println("Enter Menu Choice");
+        while (userMenuSelection < 1 || userMenuSelection > 3) {
+            System.out.println("Enter Menu Choice:");
             userMenuSelection = userInput.nextInt() ;
         }
 //      if made enumarated will need these if statements
@@ -78,19 +85,27 @@ public class Mineral_SuperTrumps_code {
         }
 
         else if(userMenuSelection == 2){
+            Mineral_SuperTrumps_code newGame = new Mineral_SuperTrumps_code(MenuSelection.INSTRUCTIONS);
+            newGame.selectedMenuOption();
+        }
+
+        else if(userMenuSelection == 3){
             Mineral_SuperTrumps_code newGame = new Mineral_SuperTrumps_code(MenuSelection.QUIT_GAME);
             newGame.selectedMenuOption();
         }
 
+
+
     }
 
     private static void welcomeMessage() {
-        System.out.println("hello");
+        System.out.println("Welcome to Mineral Supertrumps.");
     }
 
     private static void showMenu() {
         System.out.println("1. Start game");
-        System.out.println("2. Exit");
+        System.out.println("2. Instructions");
+        System.out.println("3. Exit");
     }
 
     private static int getNumPlayers() {
