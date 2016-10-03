@@ -46,7 +46,9 @@ public class Mineral_SuperTrumps_code {
 
             case INSTRUCTIONS:
                 System.out.println("<<< Mineral Supertrumps Rules >>>");
-                System.out.println(" ");
+                System.out.println(" . A dealer is randomly selected \n . A card can only be placed if the value of that card is higher then the trump categroy selected");
+                System.out.println(" . There are five categories to choose from \n . A SuperTrump card can change the category currently being played \n . If you pass you will draw a card from the deck  \n . To win you must have no cards in your hand");
+                System.out.println("..................................................................");
                 showMenu();
                 getUserMenuChoice();
 
