@@ -111,22 +111,25 @@ public class Mineral_SuperTrumps_code {
 
     private static int getNumPlayers() {
 
+        Scanner userInput = new Scanner(System.in);
         int userPlayerSelection = 0;
 
-        Scanner userInput = new Scanner(System.in);
-
         try {
+
+            System.out.println("Please Enter the number of players (1-5):");
+            userPlayerSelection = userInput.nextInt() ;
+
             while (userPlayerSelection < 1 || userPlayerSelection > 5) {
-                System.out.println("Enter amount of players");
+                System.out.println("Please Enter the number of players (1-5):");
                 userPlayerSelection = userInput.nextInt() ;
             }
 
-
-
         } catch (InputMismatchException e) {
-            System.out.println("Please Enter a number for the cards position");
+            System.out.println("Enter a number:");
+            System.out.println("....................................................");
             getNumPlayers();
         }
+
         return userPlayerSelection;
     }
 
