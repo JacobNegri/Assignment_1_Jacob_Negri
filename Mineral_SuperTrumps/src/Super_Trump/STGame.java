@@ -67,6 +67,7 @@ public class STGame {
             }
 
             if (players[yourPlayerId].playersHand().size() == 0){
+                System.out.println("Congratulations, YOU WIN!!!!!!!!!!! ");
                 gameIsOn = false;
             }
 //            else if (players[].playersHand().size() == 0){
