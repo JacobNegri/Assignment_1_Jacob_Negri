@@ -47,7 +47,7 @@ public class Mineral_SuperTrumps_code {
             System.out.println("Enter Menu Choice");
             userMenuSelection = userInput.nextInt() ;
         }
-
+//      if made enumarated will need these if statements
 //        if (userMenuSelection == 1){
 //            return 1;
 //        }
