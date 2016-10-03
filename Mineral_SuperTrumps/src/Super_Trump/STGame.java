@@ -58,11 +58,11 @@ public class STGame {
             for (int indexPlayer = 0; indexPlayer < players.length; indexPlayer++) {
 
                 if (indexPlayer == yourPlayerId){
-                    System.out.println("This is the human player: ");
+                    System.out.println("This is the human players turn: ");
                     showPlayerTurn();
                 }
                 else{
-                    System.out.println("This player is the computer: ");
+                    System.out.println("This is the computers turn: ");
                 }
             }
 
