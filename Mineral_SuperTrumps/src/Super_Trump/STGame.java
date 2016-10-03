@@ -15,6 +15,8 @@ public class STGame {
     private STDeck deck;
     int yourPlayerId;
 
+    private int
+
     public STGame(int numPlayers) {
         this.numPlayers = numPlayers;
         deck = new STDeck();
@@ -70,6 +72,9 @@ public class STGame {
                 System.out.println("Congratulations, YOU WIN!!!!!!!!!!! ");
                 gameIsOn = false;
             }
+            //else if (.playersHand().size() == 0){
+
+            //}
 //            else if (players[].playersHand().size() == 0){
 //                gameIsOn = false;
 //            }
