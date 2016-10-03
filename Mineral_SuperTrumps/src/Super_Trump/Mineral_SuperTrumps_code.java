@@ -6,6 +6,7 @@ import java.util.*;
 public class Mineral_SuperTrumps_code {
 
     public static void main(String[] args) {
+        parse();
         welcomeMessage();
         showMenu();
         getUserMenuChoice();

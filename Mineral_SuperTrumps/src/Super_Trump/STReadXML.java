@@ -9,7 +9,46 @@ import org.w3c.dom.NodeList;
  * Created by jc319816 on 3/10/16.
  */
 public class STReadXML {
+    private int cards;
+    public Document parse(Mineral_SuperTrumps_code cards) {
 
+
+        //public void main (String[]args) throws Exception {
+            try {
+                DOMParser parser = new DOMParser();
+                parser.parse("MstCards_151021.plist");
+                Document doc = parser.getDocument();
+
+                // Get the document's root XML node
+                NodeList root = doc.getChildNodes();
+
+                // Navigate down the hierarchy to get to the CEO node
+                Node comp = getNode("fileName", root);
+                Node exec = getNode("cardType", comp.getChildNodes());
+                String execType = getNodeAttr("value", exec);
+
+                // Load the executive's data from the XML
+                NodeList nodes = exec.getChildNodes();
+                String fileName = getNodeValue("fileName", nodes);
+                String firstName = getNodeValue("FirstName", nodes);
+                String street = getNodeValue("street", nodes);
+                String city = getNodeValue("city", nodes);
+                String state = getNodeValue("state", nodes);
+                String zip = getNodeValue("zip", nodes);
+
+                System.out.println("Executive Information:");
+                System.out.println("Type: " + execType);
+                System.out.println(fileName + ", " + firstName);
+                System.out.println(street);
+                System.out.println(city + ", " + state + " " + zip);
+            } catch (Exception e)
+
+            {
+                e.printStackTrace();
+            }
+        //}
+        return cards = 2;
+    }
     protected Node getNode(String tagName, NodeList nodes) {
         for ( int x = 0; x < nodes.getLength(); x++ ) {
             Node node = nodes.item(x);
@@ -75,41 +114,6 @@ public class STReadXML {
         return "";
     }
 
-
-    public void main(String[] args) throws Exception {
-        try {
-            DOMParser parser = new DOMParser();
-            parser.parse("MstCards_151021.plist");
-            Document doc = parser.getDocument();
-
-            // Get the document's root XML node
-            NodeList root = doc.getChildNodes();
-
-            // Navigate down the hierarchy to get to the CEO node
-            Node comp = getNode("fileName", root);
-            Node exec = getNode("cardType", comp.getChildNodes());
-            String execType = getNodeAttr("value", exec);
-
-            // Load the executive's data from the XML
-            NodeList nodes = exec.getChildNodes();
-            String fileName = getNodeValue("fileName", nodes);
-            String firstName = getNodeValue("FirstName", nodes);
-            String street = getNodeValue("street", nodes);
-            String city = getNodeValue("city", nodes);
-            String state = getNodeValue("state", nodes);
-            String zip = getNodeValue("zip", nodes);
-
-            System.out.println("Executive Information:");
-            System.out.println("Type: " + execType);
-            System.out.println(fileName + ", " + firstName);
-            System.out.println(street);
-            System.out.println(city + ", " + state + " " + zip);
-        } catch (Exception e)
-
-        {
-            e.printStackTrace();
-        }
-    }
 }
 
 
