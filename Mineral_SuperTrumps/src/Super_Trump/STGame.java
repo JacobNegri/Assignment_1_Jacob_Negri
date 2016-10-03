@@ -66,7 +66,13 @@ public class STGame {
                 }
             }
 
-            gameIsOn = false;
+            if (players[yourPlayerId].playersHand().size() == 0){
+                gameIsOn = false;
+            }
+//            else if (players[].playersHand().size() == 0){
+//                gameIsOn = false;
+//            }
+            //gameIsOn = false;
             //showTurnPlayer();
 
         }
