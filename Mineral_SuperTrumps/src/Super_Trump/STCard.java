@@ -10,7 +10,7 @@ public class STCard {
         this.id = id;
     }
 
-    public String tooString() {
-        return "id=" + id;
+    public String toString() {
+        return "Id =" + id;
     }
 }

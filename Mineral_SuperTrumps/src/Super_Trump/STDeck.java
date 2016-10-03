@@ -27,7 +27,7 @@ public class STDeck {
             int index = new Random().nextInt(cards.size());
             STCard card = cards.remove(index);
             ret.add(card);
-            System.out.println("\n card" + card);
+            System.out.println("\n card " + card);
         }
         return ret;
     }
