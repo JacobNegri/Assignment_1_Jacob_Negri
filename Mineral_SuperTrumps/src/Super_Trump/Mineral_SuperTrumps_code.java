@@ -75,14 +75,21 @@ public class Mineral_SuperTrumps_code {
 
         Scanner userInput = new Scanner(System.in);
 
-        while (userPlayerSelection < 1 || userPlayerSelection > 5) {
-            System.out.println("Enter amount of players");
-            userPlayerSelection = userInput.nextInt() ;
+        try {
+            while (userPlayerSelection < 1 || userPlayerSelection > 5) {
+                System.out.println("Enter amount of players");
+                userPlayerSelection = userInput.nextInt() ;
+            }
+
+
+
+        } catch (InputMismatchException e) {
+            System.out.println("Please Enter a number for the cards position");
+            getNumPlayers();
         }
-        // get the numebr of players
-        // currently just return 1 until above comment is coded
         return userPlayerSelection;
     }
+
 
     private static void showPlayer(STPlayer humPlayer) {
         System.out.println("Human player" + humPlayer);
