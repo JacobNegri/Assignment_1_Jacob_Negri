@@ -1,6 +1,7 @@
 package Super_Trump;
 
-import java.util.ArrayList;
+import java.util.*;
+
 
 /**
  * Created by jnegr3 on 26/09/2016.
@@ -26,7 +27,8 @@ public class STGame {
 
         // the two
         // int i = new random().nextInt(2) ;
-        dealerID = 1;
+        dealerID = new Random().nextInt(numPlayers + 1);
+
     }
 
     public void dealRandomCards() {
@@ -59,7 +61,7 @@ public class STGame {
 
             //todo: setup players in correct order
             for (int indexPlayer = 0; indexPlayer < players.length; indexPlayer++) {
-                //todo: check humanplayer
+
                 if (indexPlayer == yourPlayerId){
                     System.out.println("This is the human player: ");
                     showPlayerTurn();

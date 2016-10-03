@@ -21,4 +21,8 @@ public class STPlayer {
         return "Player Id=" + playerId + "\n cards = " + cards;
     }
 
+    public ArrayList<STCard> playersHand(){
+        return cards;
+    }
+
 }
