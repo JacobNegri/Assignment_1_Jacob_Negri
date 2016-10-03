@@ -58,12 +58,24 @@ public class STGame {
         while (gameIsOn) {
 
             //todo: setup players in correct order
-            for (int i = 0; i < players.length; i++) {
+            for (int indexPlayer = 0; indexPlayer < players.length; indexPlayer++) {
                 //todo: check humanplayer
+                if (indexPlayer == yourPlayerId){
+                    System.out.println("This is the human player: ");
+                    showPlayerTurn();
+                }
+                else{
+                    System.out.println("This player is the computer: ");
+                }
             }
 
+            gameIsOn = false;
             //showTurnPlayer();
 
         }
+    }
+
+    private void showPlayerTurn() {
+        System.out.println(this.getHumPlayer());
     }
 }
