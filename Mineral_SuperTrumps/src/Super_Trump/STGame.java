@@ -107,8 +107,8 @@ public class STGame {
 
         while (gameIsOn) {
 
-            System.out.println("The dealer is " + dealerID);
-            System.out.println("Player Id " + (dealerID + 1) + ": You start the round >>");
+            // System.out.println("The dealer is " + dealerID);
+            // System.out.println("Player Id " + (dealerID + 1) + ": You start the round >>");
 
             //todo: setup players in correct order
             for (int indexPlayer = dealerID + 1; indexPlayer < players.length; indexPlayer++) {
