@@ -76,8 +76,13 @@ public class Mineral_SuperTrumps_code {
         Scanner userInput = new Scanner(System.in);
 
         while (userMenuSelection < 1 || userMenuSelection > 3) {
-            System.out.println("Enter Menu Choice:");
-            userMenuSelection = userInput.nextInt() ;
+            try {
+                System.out.println("Enter Menu Choice:");
+                userMenuSelection = userInput.nextInt();
+            } catch (InputMismatchException e) {
+                System.out.println("Incorrect Menu Selection:\nPlease Enter a Menu Choice");
+                System.out.println("....................................................");
+                userInput.nextLine();
         }
 //      if made enumarated will need these if statements
         if (userMenuSelection == 1){
@@ -96,7 +101,7 @@ public class Mineral_SuperTrumps_code {
         }
 
 
-
+        }
     }
 
     private static void welcomeMessage() {
@@ -111,23 +116,20 @@ public class Mineral_SuperTrumps_code {
 
     private static int getNumPlayers() {
 
-        Scanner userInput = new Scanner(System.in);
         int userPlayerSelection = 0;
+        Scanner userInput = new Scanner(System.in);
 
-        try {
-
-            System.out.println("Please Enter the number of players (1-5):");
-            userPlayerSelection = userInput.nextInt() ;
-
-            while (userPlayerSelection < 1 || userPlayerSelection > 5) {
+        while (userPlayerSelection < 1 || userPlayerSelection > 5) {
+            try {
                 System.out.println("Please Enter the number of players (1-5):");
                 userPlayerSelection = userInput.nextInt() ;
-            }
 
-        } catch (InputMismatchException e) {
-            System.out.println("Enter a number:");
-            System.out.println("....................................................");
-            getNumPlayers();
+            } catch (InputMismatchException e) {
+                    System.out.println("Enter a number:");
+                    System.out.println("....................................................");
+                    userInput.nextLine();
+        }
+
         }
 
         return userPlayerSelection;
