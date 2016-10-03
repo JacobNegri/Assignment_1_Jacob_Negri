@@ -78,6 +78,32 @@ public class STGame {
     }
 
     private void showPlayerTurn() {
+
+        int selectOption;
+        int handCount = players[yourPlayerId].playersHand().size();
+
         System.out.println(this.getHumPlayer());
+
+        Scanner userSelection = new Scanner(System.in);
+
+        System.out.println("What card due you wish to play \n You may pass if you need");
+        selectOption = userSelection.nextInt();
+
+        while(selectOption < 0 || selectOption > handCount){
+            System.out.println("What card due you wish to play \n You may pass if you need");
+            selectOption = userSelection.nextInt();
+        }
+
+        if(selectOption == 0){
+            System.out.println("Turn Passed");
+            ArrayList<STCard> drawnCard = deck.dealCards(1);
+
+            players[yourPlayerId].playersHand().addAll(drawnCard);
+
+            System.out.println(players[yourPlayerId].playersHand());
+        }
+        else {
+            System.out.println(players[yourPlayerId].playersHand().get(selectOption - 1) + " Card is played");
+        }
     }
 }
