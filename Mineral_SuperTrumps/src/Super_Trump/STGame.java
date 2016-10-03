@@ -15,7 +15,11 @@ public class STGame {
     private STDeck deck;
     int yourPlayerId;
 
-    private int
+    private int botPlayerId1;
+    private int botPlayerId2;
+    private int botPlayerId3;
+    private int botPlayerId4;
+
 
     public STGame(int numPlayers) {
         this.numPlayers = numPlayers;
@@ -49,6 +53,44 @@ public class STGame {
     public STPlayer getHumPlayer() {
         return players[yourPlayerId];
     }
+
+    public void selectBOTPlayer1(){
+        botPlayerId1 = 1;
+    }
+
+    public STPlayer getBOTPlayer1() {
+        return players[botPlayerId1];
+    }
+
+    public void selectBOTPlayer2(){
+        botPlayerId2 = 2;
+    }
+
+    public STPlayer getBOTPlayer2() {
+        return players[botPlayerId2];
+    }
+
+    public void selectBOTPlayer3(){
+        botPlayerId3 = 3;
+    }
+
+    public STPlayer getBOTPlayer3() {
+        return players[botPlayerId3];
+    }
+
+    public void selectBOTPlayer4(){
+        botPlayerId4 = 4;
+    }
+
+    public STPlayer getBOTPlayer4() {
+        return players[botPlayerId4];
+    }
+
+
+
+
+
+
 
     public void playTheGame() {
 

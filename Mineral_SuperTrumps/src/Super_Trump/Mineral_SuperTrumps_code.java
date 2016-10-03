@@ -66,6 +66,54 @@ public class Mineral_SuperTrumps_code {
         STPlayer humPlayer = game.getHumPlayer();
         showPlayer(humPlayer);
 
+        if(numPlayers == 2){
+            game.selectBOTPlayer1();
+
+            STPlayer botPlayerId1 = game.getBOTPlayer1();
+
+            showPlayer(botPlayerId1);
+        }
+        else if(numPlayers == 3){
+            game.selectBOTPlayer1();
+            game.selectBOTPlayer2();
+
+            STPlayer botPlayerId1 = game.getBOTPlayer1();
+            STPlayer botPlayerId2 = game.getBOTPlayer2();
+
+            showPlayer(botPlayerId1);
+            showPlayer(botPlayerId1);
+        }
+        else if(numPlayers == 4){
+            game.selectBOTPlayer1();
+            game.selectBOTPlayer2();
+            game.selectBOTPlayer3();
+
+            STPlayer botPlayerId1 = game.getBOTPlayer1();
+            STPlayer botPlayerId2 = game.getBOTPlayer2();
+            STPlayer botPlayerId3 = game.getBOTPlayer3();
+
+            showPlayer(botPlayerId1);
+            showPlayer(botPlayerId2);
+            showPlayer(botPlayerId3);
+        }
+        else if(numPlayers == 5){
+            game.selectBOTPlayer1();
+            game.selectBOTPlayer2();
+            game.selectBOTPlayer3();
+            game.selectBOTPlayer4();
+
+            STPlayer botPlayerId1 = game.getBOTPlayer1();
+            STPlayer botPlayerId2 = game.getBOTPlayer2();
+            STPlayer botPlayerId3 = game.getBOTPlayer3();
+            STPlayer botPlayerId4 = game.getBOTPlayer4();
+
+            showPlayer(botPlayerId1);
+            showPlayer(botPlayerId2);
+            showPlayer(botPlayerId3);
+            showPlayer(botPlayerId4);
+        }
+
+
         // game.playTheGame();
         return game;
     }
