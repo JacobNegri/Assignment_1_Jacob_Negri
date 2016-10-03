@@ -121,6 +121,14 @@ public class STGame {
                     System.out.println("Computers Turn: ");
                     convertObjectToInteger = Integer.parseInt(computerBots.get(indexPlayer - 1).toString());
 
+                    // As the XML file is currently not being able to load the BOT players will just place down a random card
+
+                    //selectOption = new Random().nextInt(players[botPlayerId1].playersHand());
+
+//                    System.out.println("<< " + players[botPlayerId1].playersHand().get(selectOption - 1) + " Card is played >>");
+//                    players[yourPlayerId].playersHand().remove(selectOption - 1);
+//
+//                    System.out.println(players[yourPlayerId].playersHand());
                     showCompTurn(convertObjectToInteger);
                 }
             }
@@ -143,6 +151,13 @@ public class STGame {
 
     private void showCompTurn(int computerId) {
         System.out.println("Computer Id = " + computerId);
+
+        // This is only added as the reading XML was not working and would not allow me to actually get the players to place cards without knowing values of each card
+
+        System.out.println("<< " + players[computerId].playersHand().get(1) + " Card is played >>");
+        players[computerId].playersHand().remove(1);
+
+        System.out.println(players[computerId].playersHand());
     }
 
     private void showPlayerTurn() {
