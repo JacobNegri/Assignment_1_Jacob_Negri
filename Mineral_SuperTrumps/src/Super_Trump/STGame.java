@@ -113,7 +113,13 @@ public class STGame {
             //todo: setup players in correct order
             for (int indexPlayer = yourPlayerId; indexPlayer < players.length; indexPlayer++) {
 
-                if (indexPlayer == yourPlayerId){
+                if (players[yourPlayerId].playersHand().size() == 0){
+                    System.out.println("Congratulations, YOU WIN!!!!!!!!!!! ");
+                    gameIsOn = false;
+                    break;
+                }
+
+                else if (indexPlayer == yourPlayerId){
                     System.out.println("Users Turn: \n");
                     showPlayerTurn();
                 }
@@ -133,10 +139,7 @@ public class STGame {
                 }
             }
 
-            if (players[yourPlayerId].playersHand().size() == 0){
-                System.out.println("Congratulations, YOU WIN!!!!!!!!!!! ");
-                gameIsOn = false;
-            }
+
             //else if (.playersHand().size() == 0){
 
             //}
