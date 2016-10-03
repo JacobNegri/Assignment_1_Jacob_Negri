@@ -7,6 +7,10 @@ public class Mineral_SuperTrumps_code {
 
     private MenuSelection menuOption;
 
+    private Mineral_SuperTrumps_code(MenuSelection menuOption){
+        this.menuOption = menuOption;
+    }
+
     private enum MenuSelection{
         NEW_GAME, QUIT_GAME
     }
@@ -27,7 +31,7 @@ public class Mineral_SuperTrumps_code {
 //        }
     }
 
-    private void selectedMenuOption{
+    private void selectedMenuOption(){
         switch(menuOption) {
 
             case NEW_GAME:
@@ -69,16 +73,15 @@ public class Mineral_SuperTrumps_code {
         }
 //      if made enumarated will need these if statements
         if (userMenuSelection == 1){
-            Mineral_SuperTrumps_code newGame = new Mineral_SuperTrumps_code(.NEW_GAME);
+            Mineral_SuperTrumps_code newGame = new Mineral_SuperTrumps_code(MenuSelection.NEW_GAME);
             newGame.selectedMenuOption();
         }
 
         else if(userMenuSelection == 2){
-            return 2;
+            Mineral_SuperTrumps_code newGame = new Mineral_SuperTrumps_code(MenuSelection.QUIT_GAME);
+            newGame.selectedMenuOption();
         }
-        // get the user choice and return it
-        // currently just return 1 until above comment is code
-        return userMenuSelection;
+
     }
 
     private static void welcomeMessage() {
