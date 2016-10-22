@@ -20,6 +20,7 @@ public class STMainGUI extends JFrame {
     final int HEIGHT = 225;
 
     private STGame game;
+    PlayerView playerView;
 
     public static void main(String[] args) {
         STMainGUI frame = new STMainGUI();
@@ -52,8 +53,9 @@ public class STMainGUI extends JFrame {
 
             STPlayer humanPlayer = game.getHumPlayer();
 
-            PlayerView view = new PlayerView(humanPlayer);
-            add(view, BorderLayout.CENTER);
+            playerView = new PlayerView(humanPlayer);
+
+            add(playerView, BorderLayout.CENTER);
             // how to trigger repaint
 
             System.out.println("helloooo");
