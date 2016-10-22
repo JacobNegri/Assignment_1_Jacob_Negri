@@ -22,6 +22,9 @@ public class CardView extends JPanel {
             public void mouseClicked(MouseEvent e) {
 
                 super.mouseClicked(e);
+
+                STGame.currGame.validCardToPlay(card);
+
                 cardName.setText("I was clicked!!!");
             }
         });

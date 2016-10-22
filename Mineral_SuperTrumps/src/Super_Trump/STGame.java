@@ -12,6 +12,10 @@ import static Super_Trump.Mineral_SuperTrumps_code.showMenu;
 public class STGame {
 
     private static final int NUM_CARDS_TO_DEAL = 8;
+
+    // below added for the GUI
+    public static STGame currGame;
+
     private int numPlayers;
     private int dealerID;
     private STPlayer[] players;
@@ -31,6 +35,12 @@ public class STGame {
     public STGame(int numPlayers) {
         this.numPlayers = numPlayers;
         deck = new STDeck();
+
+        currGame = this;
+    }
+
+    public boolean validCardToPlay() {
+        return true;
     }
 
     public void selectDealer() {
