@@ -53,6 +53,10 @@ public class STMainGUI extends JFrame {
 
             STPlayer humanPlayer = game.getHumPlayer();
 
+            if(playerView != null) {
+                remove(playerView);
+            }
+
             playerView = new PlayerView(humanPlayer);
 
             add(playerView, BorderLayout.CENTER);
