@@ -39,18 +39,30 @@ public class STMainGUI extends JFrame {
         add(greeting, BorderLayout.SOUTH);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-       //pressMe.addActionListener((e));
-    }
-////        pressMe.addActionListener - {
-////
-////        }
-//        pressMe.addActionListener(new MyActivateButtno());
-    public void actionPerformed(ActionEvent e)
-    {
-        String name = answer.getText();
-        String greet = "Hello, " + name;
-        greeting.setText(greet);
-    }
+        pressMe.addActionListener(e -> {
+
+            // todo get number of players from text field
+            STGame game = new STGame(5);
+            game.selectDealer();
+            game.dealRandomCards();
+
+            game.selectYouAsPlayer();
+
+            System.out.println("helloooo");
+        });
+        }
+//       //pressMe.addActionListener((e));
+//    }
+//////        pressMe.addActionListener - {
+//////
+//////        }
+////        pressMe.addActionListener(new MyActivateButtno());
+//    public void actionPerformed(ActionEvent e)
+//    {
+//        String name = answer.getText();
+//        String greet = "Hello, " + name;
+//        greeting.setText(greet);
+//    }
 
 
 }
