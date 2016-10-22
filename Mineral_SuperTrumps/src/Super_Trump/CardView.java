@@ -7,4 +7,13 @@ import javax.swing.*;
  */
 public class CardView extends JPanel {
 
+    STCard card;
+    JLabel cardName;
+
+    public CardView(STCard card) {
+        this.card = card;
+        cardName = new JLabel(cardName.getText());
+        add(cardName);
+    }
+
 }

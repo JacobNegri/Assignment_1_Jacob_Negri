@@ -31,6 +31,7 @@ public class PlayerView extends JPanel {
 
         for (int i = 0; i < cards.size(); i++) {
             STCard card = cards.get(i);
+            CardView cardView = new CardView(card);
         }
 
     }

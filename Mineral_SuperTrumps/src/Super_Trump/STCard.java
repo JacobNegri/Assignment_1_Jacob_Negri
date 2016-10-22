@@ -5,12 +5,17 @@ package Super_Trump;
  */
 public class STCard {
     private int id;
+    private String name;
 
-    public STCard(int id){
-        this.id = id;
-    }
+//    public STCard(int id){
+//        this.id = id;
+//    }
 
     public String toString() {
         return "Id =" + id;
+    }
+
+    public String getName() {
+        return name;
     }
 }
