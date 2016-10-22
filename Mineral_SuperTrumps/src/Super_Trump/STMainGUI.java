@@ -1,8 +1,10 @@
 package Super_Trump;
 
+//import cp2406_2016.ch14_swing.MyActivateButtno;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 /**
  * Created by jnegr3 on 22/10/2016.
@@ -23,8 +25,7 @@ public class STMainGUI extends JFrame {
         frame.setVisible(true);
     }
 
-    public STMainGUI()
-    {
+    public STMainGUI() {
 
         super("Hello Frame");
         setSize(WIDTH, HEIGHT);
@@ -38,11 +39,18 @@ public class STMainGUI extends JFrame {
         add(greeting, BorderLayout.SOUTH);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-//        pressMe.addActionListener - {
-//
-//        }
-        pressMe.addActionListener(new MyActivateButtno());
-
+        pressMe.addActionListener((e));
+    }
+////        pressMe.addActionListener - {
+////
+////        }
+//        pressMe.addActionListener(new MyActivateButtno());
+    public void actionPerformed(ActionEvent e)
+    {
+        String name = answer.getText();
+        String greet = "Hello, " + name;
+        greeting.setText(greet);
+    }
 
 
 }
