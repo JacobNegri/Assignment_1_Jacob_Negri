@@ -12,7 +12,7 @@ public class CardView extends JPanel {
 
     public CardView(STCard card) {
         this.card = card;
-        cardName = new JLabel(cardName.getText());
+        cardName = new JLabel(card.getName() + "_id" + card.getId());
         add(cardName);
     }
 
