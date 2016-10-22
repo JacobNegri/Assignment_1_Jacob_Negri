@@ -19,6 +19,8 @@ public class STMainGUI extends JFrame {
     final int WIDTH = 275;
     final int HEIGHT = 225;
 
+    private STGame game;
+
     public static void main(String[] args) {
         STMainGUI frame = new STMainGUI();
         frame.setVisible(true);
@@ -42,7 +44,7 @@ public class STMainGUI extends JFrame {
         pressMe.addActionListener(e -> {
 
             // todo get number of players from text field
-            STGame game = new STGame(5);
+            game = new STGame(5);
             game.selectDealer();
             game.dealRandomCards();
 
