@@ -25,4 +25,7 @@ public class STPlayer {
         return cards;
     }
 
+    public ArrayList<STCard> getCards() {
+        return cards;
+    }
 }

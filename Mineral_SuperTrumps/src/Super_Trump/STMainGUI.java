@@ -31,14 +31,14 @@ public class STMainGUI extends JFrame {
 
         super("ST Game");
         setSize(WIDTH, HEIGHT);
-        setLayout(new FlowLayout());
+        //setLayout(new FlowLayout());
         question.setFont(bigFont);
         greeting.setFont(bigFont);
         add(question, BorderLayout.NORTH);
-        add(answer);
-        add(pressMe);
+        add(answer, BorderLayout.WEST);
+        add(pressMe, BorderLayout.SOUTH);
         pressMe.setToolTipText("I do not have any info, sorry");
-        add(greeting, BorderLayout.SOUTH);
+        add(greeting, BorderLayout.EAST);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         pressMe.addActionListener(e -> {
@@ -49,6 +49,12 @@ public class STMainGUI extends JFrame {
             game.dealRandomCards();
 
             game.selectYouAsPlayer();
+
+            STPlayer humanPlayer = game.getHumPlayer();
+
+            PlayerView view = new PlayerView(humanPlayer);
+            add(view, BorderLayout.CENTER);
+            // how to trigger repaint
 
             System.out.println("helloooo");
         });
