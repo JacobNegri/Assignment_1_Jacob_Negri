@@ -19,7 +19,7 @@ public class STGame {
     private int numPlayers;
     private int dealerID;
     private STPlayer[] players;
-    private STDeck deck;
+    //private STDeck deck;
     int yourPlayerId;
 
     private int botPlayerId1;
@@ -34,7 +34,7 @@ public class STGame {
 
     public STGame(int numPlayers) {
         this.numPlayers = numPlayers;
-        deck = new STDeck();
+        //deck = new STDeck();
 
         currGame = this;
     }
@@ -65,8 +65,8 @@ public class STGame {
         }
 
         for (STPlayer player : players) {
-            ArrayList<STCard> cards = deck.dealCards(NUM_CARDS_TO_DEAL);
-            player.setCards(cards);
+            //ArrayList<STCard> cards = deck.dealCards(NUM_CARDS_TO_DEAL);
+            //player.setCards(cards);
         }
     }
 
@@ -215,9 +215,9 @@ public class STGame {
 
             if (selectOption == 0) {
                 System.out.println("<< Turn Passed >>");
-                ArrayList<STCard> drawnCard = deck.dealCards(1);
+                //ArrayList<STCard> drawnCard = deck.dealCards(1);
 
-                players[yourPlayerId].playersHand().addAll(drawnCard);
+                //players[yourPlayerId].playersHand().addAll(drawnCard);
 
                 System.out.println(players[yourPlayerId].playersHand());
             } else {

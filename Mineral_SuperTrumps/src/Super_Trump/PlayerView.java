@@ -23,12 +23,12 @@ public class PlayerView extends JPanel {
         ArrayList<STCard> cards = new ArrayList<STCard>();
 
         // BELOW IS ONLY IF THE LOADING CODE ABOVE DOES NOT WORK
-        cards.add(new STCard(11,"11"));
-        cards.add(new STCard(12,"12"));
         cards.add(new STCard(13,"13"));
-        cards.add(new STCard(14,"14"));
-        cards.add(new STCard(15,"15"));
-        cards.add(new STCard(16,"16"));
+        cards.add(new STCard(12,"12"));
+        cards.add(new STCard(21,"21"));
+        cards.add(new STCard(17,"17"));
+        cards.add(new STCard(5,"5"));
+        cards.add(new STCard(21,"21"));
 
         for (int i = 0; i < cards.size(); i++) {
             STCard card = cards.get(i);
