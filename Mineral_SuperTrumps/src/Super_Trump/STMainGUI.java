@@ -11,6 +11,7 @@ import java.awt.event.ActionListener;
  */
 public class STMainGUI extends JFrame {
 
+    public static STMainGUI mainUI;
     JLabel question = new JLabel("Number of players:");
     Font bigFont = new Font("Arial", Font.BOLD, 16);
     JTextField answer = new JTextField(10);
@@ -31,6 +32,8 @@ public class STMainGUI extends JFrame {
     public STMainGUI() {
 
         super("ST Game");
+        mainUI = this;
+
         setSize(WIDTH, HEIGHT);
         //setLayout(new FlowLayout());
         question.setFont(bigFont);
@@ -58,15 +61,17 @@ public class STMainGUI extends JFrame {
 
             game.selectYouAsPlayer();
 
-            STPlayer humanPlayer = game.getHumPlayer();
+            reload();
 
-            if(playerView != null) {
-                remove(playerView);
-            }
-
-            playerView = new PlayerView(humanPlayer);
-
-            add(playerView, BorderLayout.CENTER);
+//            STPlayer humanPlayer = game.getHumPlayer();
+//
+//            if(playerView != null) {
+//                remove(playerView);
+//            }
+//
+//            playerView = new PlayerView(humanPlayer);
+//
+//            add(playerView, BorderLayout.CENTER);
             // how to trigger repaint
 
             System.out.println("helloooo");
@@ -87,5 +92,19 @@ public class STMainGUI extends JFrame {
 //        greeting.setText(greet);
 //    }
 
+    public void reload() {
+
+        STPlayer humanPlayer = game.getHumPlayer();
+
+
+        if(playerView != null) {
+            remove(playerView);
+        }
+
+        playerView = new PlayerView(humanPlayer);
+
+        add(playerView, BorderLayout.CENTER);
+
+        }
 
 }

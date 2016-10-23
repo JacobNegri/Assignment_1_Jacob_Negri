@@ -36,6 +36,8 @@ public class CardView extends JPanel {
                 game.getHumPlayer().getCards().remove(card);
                 // game.setCurrentCard(card);
 
+                STMainGUI.mainUI.reload();
+
 
                 // place cardview to play-table-view
                 // remove card-view from player-view
