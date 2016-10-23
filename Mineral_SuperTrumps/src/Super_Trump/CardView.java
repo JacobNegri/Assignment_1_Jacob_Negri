@@ -27,13 +27,19 @@ public class CardView extends JPanel {
 
                 STGame game = STGame.currGame;
 
-                boolean ok = game.currGame.validCardToPlay(card);
+                boolean ok = game.currGame.playCard(card);
 
                 if(!ok) {
                     cardName.setText("Not okay to play");
                 }
 
-                game.playCard(card);
+                game.getHumPlayer().getCards().remove(card);
+                // game.setCurrentCard(card);
+
+
+                // place cardview to play-table-view
+                // remove card-view from player-view
+                // game.playCard(card);
 
                 cardName.setText("I was clicked!!!");
             }
@@ -45,7 +51,7 @@ public class CardView extends JPanel {
 //
 //            super.mouseClicked(e);
 //
-//            STGame.currGame.validCardToPlay(card);
+//            STGame.currGame.playCard(card);
 //
 //            cardName.setText("I was clicked!!!");
 //        }
