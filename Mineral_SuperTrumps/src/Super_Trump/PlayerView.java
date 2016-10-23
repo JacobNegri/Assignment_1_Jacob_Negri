@@ -38,5 +38,6 @@ public class PlayerView extends JPanel {
 
         }
 
+        repaint();
     }
 }

@@ -39,8 +39,8 @@ public class STGame {
         currGame = this;
     }
 
-    public boolean validCardToPlay() {
-        return true;
+    public boolean validCardToPlay(STCard card) {
+        return false;
     }
 
     public void selectDealer() {

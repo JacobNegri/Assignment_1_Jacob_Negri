@@ -9,13 +9,15 @@ import java.awt.event.MouseEvent;
  */
 public class CardView extends JPanel {
 
-    STCard card;
+    final STCard card;
     JLabel cardName;
 
-    public CardView(STCard card) {
+    public CardView(final STCard card) {
         this.card = card;
         cardName = new JLabel(card.getName() + "_id" + card.getId());
         add(cardName);
+
+        // card.getImage();
 
         addMouseListener(new MouseInputAdapter() {
             @Override
@@ -23,12 +25,29 @@ public class CardView extends JPanel {
 
                 super.mouseClicked(e);
 
-                STGame.currGame.validCardToPlay(card);
+                STGame game = STGame.currGame;
+
+                boolean ok = game.currGame.validCardToPlay(card);
+
+                if(!ok) {
+                    cardName.setText("Not okay to play");
+                }
+
+                game.playCard(card);
 
                 cardName.setText("I was clicked!!!");
             }
         });
     }
 
-
+//    class MyMouse() extends MouseInputAdapter{
+//        public void mouseClicked(MouseEvent e) {
+//
+//            super.mouseClicked(e);
+//
+//            STGame.currGame.validCardToPlay(card);
+//
+//            cardName.setText("I was clicked!!!");
+//        }
+//    }
 }
