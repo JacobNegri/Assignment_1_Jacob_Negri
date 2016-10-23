@@ -40,6 +40,13 @@ public class STGame {
     }
 
     public boolean playCard(STCard card) {
+
+        // play card by human
+        // loop over the rest of bots
+        // current car
+        STMainGUI.mainUI.reload();
+        // and wait 1 second
+
         return true;
     }
 

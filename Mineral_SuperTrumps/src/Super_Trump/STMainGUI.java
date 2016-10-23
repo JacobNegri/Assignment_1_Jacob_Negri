@@ -94,12 +94,13 @@ public class STMainGUI extends JFrame {
 
     public void reload() {
 
-        STPlayer humanPlayer = game.getHumPlayer();
-
-
         if(playerView != null) {
             remove(playerView);
         }
+
+        // todo add panel currentCardView
+
+        STPlayer humanPlayer = game.getHumPlayer();
 
         playerView = new PlayerView(humanPlayer);
 
