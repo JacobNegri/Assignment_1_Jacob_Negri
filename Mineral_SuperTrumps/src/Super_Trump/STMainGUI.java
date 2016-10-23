@@ -35,9 +35,16 @@ public class STMainGUI extends JFrame {
         //setLayout(new FlowLayout());
         question.setFont(bigFont);
         greeting.setFont(bigFont);
-        add(question, BorderLayout.NORTH);
-        add(answer, BorderLayout.WEST);
+
+        JPanel panel1 = new JPanel();
+        panel1.add(question);
+        panel1.add(answer);
+        add(panel1, BorderLayout.NORTH);
+//        add(question, BorderLayout.NORTH);
+//        add(answer, BorderLayout.WEST);
+
         add(pressMe, BorderLayout.SOUTH);
+
         pressMe.setToolTipText("I do not have any info, sorry");
         add(greeting, BorderLayout.EAST);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
