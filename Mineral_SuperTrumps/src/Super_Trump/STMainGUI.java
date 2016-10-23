@@ -64,6 +64,8 @@ public class STMainGUI extends JFrame {
 
             System.out.println("helloooo");
         });
+
+        //pressMe.addActionListener(new MyActivateButtno());
         }
 //       //pressMe.addActionListener((e));
 //    }
